@@ -16,12 +16,8 @@ RUN npm run build
 
 RUN ls -a ./dist
 
-COPY ./dist/*.js ./
-
-RUN ls -a
-
 RUN npm install pm2 -g
 
 EXPOSE 3000
 
-CMD ["node","server.js"]
+CMD ["node","./dist/server.js"]
