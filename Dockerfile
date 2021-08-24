@@ -14,7 +14,7 @@ RUN npm install
 
 RUN npm run build
 
-RUN ls -a
+RUN ls -a ./dist
 
 COPY ./dist/*.js ./
 
