@@ -12,6 +12,7 @@ FROM node:12.17.0-alpine
 WORKDIR /usr
 COPY package.json ./
 RUN npm install --only=production
+RUN ls -a
 COPY /dist/* ./
 RUN ls -a
 RUN npm install pm2 -g
